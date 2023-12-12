@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Student student1 = new Student(4, "aaa","aaa", "aaa");
+        Student student1 = new Student(4, "aab","aaa", "aaa");
         Student student2 = new Student(2, "aab","aab", "aab");
         Student student3 = new Student(1, "Aaa","Aaa", "Aaa");
         Student student4 = new Student(3, "bbb","bbb", "bbb");
@@ -28,7 +28,12 @@ public class Main {
 
         StudentGroupService service = new StudentGroupService(studentGroup);
         for (Student student: service.getSortedStudentGroup()) System.out.println(student);
+        System.out.println();
+        for (Student student: service.getSortedStudentGroupByFIO()) System.out.println(student);
+
     }
+
+
 
 
 }

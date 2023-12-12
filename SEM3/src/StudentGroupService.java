@@ -19,4 +19,10 @@ public class StudentGroupService {
         return studentList;
     }
 
+    public List<Student> getSortedStudentGroupByFIO(){
+        List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
+        studentList.sort(new StudentComparator());
+        return studentList;
+    }
+
 }
