@@ -14,11 +14,14 @@ public class Main {
         studentGroup.addStudent(student2);
         studentGroup.addStudent(student3);
         studentGroup.addStudent(student4);
-
+    /*
         StudentGroupIterator iterator = new StudentGroupIterator(studentGroup);
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
-
+    */
+        for (Student student: studentGroup) {
+            System.out.println(student);
+        }
     }
 }

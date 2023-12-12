@@ -25,6 +25,6 @@ public class StudentGroupIterator implements Iterator<Student> {
     @Override
     public void remove() {
         if (hasNext())
-        studentList.remove(counter);
+            studentList.remove(counter);
     }
 }
