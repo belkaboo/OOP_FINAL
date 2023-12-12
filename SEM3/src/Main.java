@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+    /*
         Student student1 = new Student(4, "aab","aaa", "aaa");
         Student student2 = new Student(2, "aab","aab", "aab");
         Student student3 = new Student(1, "Aaa","Aaa", "Aaa");
@@ -21,8 +22,6 @@ public class Main {
         studentGroup.addStudent(student3);
         studentGroup.addStudent(student4);
 
-
-    /*
         StudentGroupIterator iterator = new StudentGroupIterator(studentGroup);
         while (iterator.hasNext()){
             System.out.println(iterator.next());
@@ -49,11 +48,11 @@ public class Main {
         Stream stream1 = new Stream(1);
         stream1.addGroup(group1);
         stream1.addGroup(group2);
+        stream1.addGroups(group3);
 
         Stream stream2 = new Stream(2);
         stream2.addGroup(group3);
         stream2.addGroup(group4);
-        stream2.addGroups(group2);
 
         List<Stream> streams = new ArrayList<>();
         streams.add(stream1);
@@ -64,10 +63,8 @@ public class Main {
             System.out.println(stream);
         }
 
-
-
-
-
+        System.out.println("size - " + stream1.GetSize());
+        System.out.println("size - " + stream2.GetSize());
     }
 
 }

@@ -1,10 +1,11 @@
 package HomeWork;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-public class Stream implements Iterable<Group>{
+public class Stream implements Iterable<Group>, Comparable<Stream> {
     private int streamID;
     private List<Group> groupList;
 
@@ -53,5 +54,12 @@ public class Stream implements Iterable<Group>{
     @Override
     public Iterator<Group> iterator() {
         return new StreamIterator(this);
+    }
+
+    @Override
+    public int compareTo(Stream o) {
+        if (GetSize() > o.GetSize()) return 1;
+        if (GetSize() < o.GetSize()) return -1;
+        return 0;
     }
 }
