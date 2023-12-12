@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Comparable<Student> {
     private  int studentID;
     private String firstName;
     private String secondName;
@@ -51,5 +51,14 @@ public class Student {
                 ", secondName='" + secondName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        if (studentID> o.getStudentID())
+            return 1;
+        if (studentID < o.getStudentID())
+            return -1;
+        return 0;
     }
 }
